@@ -1,0 +1,38 @@
+
+
+*{
+    box-sizing: border-box;
+    border: 0;
+    padding: 0;
+}
+
+.responsive-wraper{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.titulo{
+    margin-left: 14%;
+}
+
+.titulo h3{
+    font-size: 2rem;
+}
+
+.contenedor{
+    max-width: 650px;
+    max-height: 650px;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 5%;
+    background-color: black;
+}
+
+.posicion{
+    width: 8rem;
+    height: 8rem;
+    margin: 4%;
+    flex: 1 1 20%;
+    border-radius: 50%;
+    background-color: lightgray;
+}
