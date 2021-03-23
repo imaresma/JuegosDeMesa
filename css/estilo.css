@@ -22,8 +22,10 @@
 .contenedor{
     max-width: 650px;
     max-height: 650px;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    justify-content: center;
+    align-items: center;
     border-radius: 5%;
     background-color: black;
 }
@@ -32,7 +34,12 @@
     width: 8rem;
     height: 8rem;
     margin: 4%;
+    justify-self: center;
     flex: 1 1 20%;
     border-radius: 50%;
     background-color: lightgray;
+}
+
+.posicion:hover{
+    background-color: grey;
 }
