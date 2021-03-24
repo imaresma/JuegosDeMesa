@@ -7,10 +7,12 @@ function ficha(num){
     if (finPartida == false){
         if (comprobar(1, numero) == true){
             victoria();
-            random();
-            victoria();
-        }else { alert ("No puedes escoger una posicion ya coloreada");}
-    }
+            if (finPartida == false){ 
+                random();
+                victoria(); 
+            }
+        }else { alert ("No puedes escoger una posicion ya coloreada");} 
+    } else { alert("La partida ya ha terminado")}     
 }
 
 function random(){
@@ -21,19 +23,17 @@ function random(){
         console.log("el valor de x es: " + x);
         jugada = comprobar(-1, x);
     }while(!jugada);
-    
 }
 
 function comprobar(jugador, posicion){
-    console.log("Entro en la funcion con valor: " + posicion )
+
     if (mapa[posicion] == 0){
-        console.log("dibujo en la posicion: " + posicion);
         if (jugador == 1){
             document.getElementById(posicion).style.backgroundColor = "red";
         }  else { document.getElementById(posicion).style.backgroundColor = "blue"; }
         mapa[posicion] = jugador; 
         return true;
-    }else { return false; }
+    } else { return false; }
 }
 
 function victoria(){
@@ -61,7 +61,6 @@ function victoria(){
 function ganador(){
     
     var numEspacios=0;
-
     for(i=0; i<9; i++){ if(mapa[i] == 0) numEspacios++; }
 
     // Las líneas horizontales
@@ -76,11 +75,6 @@ function ganador(){
     if(mapa[0] == mapa[4] && mapa[4] == mapa[8] && mapa[0] !=0) return mapa[0];
     if(mapa[2] == mapa[4] && mapa[4] == mapa[6] && mapa[2] !=0) return mapa[2];
     
-    if (numEspacios > 0){ 
-        return 0;
-    } else { return 2; }
-}
-
-function reset(){
-
+    if (numEspacios > 0){ return 0;} 
+    else { return 2; }
 }
