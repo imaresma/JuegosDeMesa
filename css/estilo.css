@@ -20,8 +20,8 @@
 }
 
 .contenedor{
-    max-width: 650px;
-    max-height: 650px;
+    width: 500px;
+    height: 500px;
     display: grid;
     grid-template-columns: 33% 33% 33%;
     justify-content: center;
@@ -42,4 +42,8 @@
 
 .posicion:hover{
     background-color: grey;
+}
+
+.posicion:active{
+    background-color: red;
 }
