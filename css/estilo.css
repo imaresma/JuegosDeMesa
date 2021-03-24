@@ -57,6 +57,7 @@ main{
     flex: 1 1 20%;
     border-radius: 50%;
     background-color: lightgray;
+    cursor: pointer;
 }
 
 .posicion:hover{
@@ -76,3 +77,15 @@ main{
     padding: 2rem;;
 }
 
+.btnReset{
+    display: flex;
+    padding: 2rem;
+    justify-content: center;
+    width: 100%;
+}
+
+.btnReset input{
+    padding: 1rem;
+    cursor: pointer;
+    background-color: navy;
+}
