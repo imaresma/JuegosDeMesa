@@ -6,10 +6,10 @@ function ficha(num){
     var numero = num;
     if (finPartida == false){
         if (comprobar(1, numero) == true){
+            chatJuego(1, numero);
             victoria();
             if (finPartida == false){ 
                 random();
-                victoria(); 
             }
         }else { alert ("No puedes escoger una posicion ya coloreada");} 
     } else { alert("La partida ya ha terminado")}     
@@ -20,9 +20,10 @@ function random(){
         var jugada = false
         if (finPartida == true){ jugada = true;}
         var x = Math.floor((Math.random() * 10));
-        console.log("el valor de x es: " + x);
         jugada = comprobar(-1, x);
     }while(!jugada);
+    chatJuego(-1, x);
+    victoria(); 
 }
 
 function comprobar(jugador, posicion){
@@ -44,15 +45,15 @@ function victoria(){
       break;
      case 1:
       finPartida = true;
-      window.alert("¡Ganó el rojo!");
+      chatJuego(2,1);
       break;
      case -1:
       finPartida = true;
-      window.alert("¡Ganó el azul!");
+      chatJuego(2,2);
       break;
      case 2:
       finPartida = true;
-      window.alert("¡Empate!");
+      chatJuego(2,3);
       break; 
    }
 }
@@ -77,4 +78,37 @@ function ganador(){
     
     if (numEspacios > 0){ return 0;} 
     else { return 2; }
+}
+
+
+function chatJuego(jugador, movimiento){
+   
+    var numero = movimiento + 1;
+    var linea = document.getElementById("chat");
+
+    var x = document.createElement("p");
+    switch(jugador){
+    case -1:  
+        x.innerHTML = "El maquina a selecionado la casilla: " + numero; 
+        break;
+    case 0:
+        x.innerHTML = "Comienza la partida!!";
+        break;
+    case 1:
+        x.innerHTML = "El jugador a selecionado la casilla: " + numero;
+        break;
+    case 2:
+        switch(movimiento){
+            case 1:
+                x.innerHTML = "Victoria del jugador!!";
+                break;
+            case 2:
+                x.innerHTML = "Victoria de la maquina";
+                break;
+            case 3:
+                x.innerHTML = "Empate entre los dos";
+                break;
+        }
+    }
+    linea.appendChild(x);
 }

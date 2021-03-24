@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juegos de mesa</title>
 </head>
-<body>
+<body onload="chatJuego(0,0)">
     <header></header>
     <main class="main responsive-wraper">
-        <div class="juego">
+        <div class="tresEnRaya">
             <div class="titulo">
                 <h3>TRES EN RAYA!!</h3>
+                <h2>Tu eres las Rojas</h2>
             </div>
             <div class="contenedor">
                 <button onclick="ficha(0)" class="posicion" id="0"></button>
@@ -25,7 +26,14 @@
                 <button onclick="ficha(8)" class="posicion" id="8"></button>
             </div>
         </div>
-        <input type="button" value="Reload Page" onClick="document.location.reload(true)">
+        <div class="log">
+            <div class="titulo">
+                <h3>Chat</h3>
+            </div>
+            <div id="chat">
+
+            </div>
+        </div>
     </main>
     <footer></footer>
     <script src="js/funciones.js"></script>

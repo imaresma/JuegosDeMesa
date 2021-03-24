@@ -11,13 +11,32 @@
     margin: 0 auto;
 }
 
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.tresEnRaya{
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .titulo{
-    margin-left: 14%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .titulo h3{
+    width: 100%;
+    text-align: center;
     font-size: 2rem;
 }
+
 
 .contenedor{
     width: 500px;
@@ -47,3 +66,13 @@
 .posicion:active{
     background-color: red;
 }
+
+#chat{
+    width: 500px;
+    height: 600px;
+    border: 1px;
+    border-style: inset;
+    border-color: black;
+    padding: 2rem;;
+}
+
