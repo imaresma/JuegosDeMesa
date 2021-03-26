@@ -89,13 +89,13 @@ function chatJuego(jugador, movimiento){
     var x = document.createElement("p");
     switch(jugador){
     case -1:  
-        x.innerHTML = "El maquina a selecionado la casilla: " + numero; 
+        x.innerHTML = "El máquina ha selecionado la casilla: " + numero; 
         break;
     case 0:
         x.innerHTML = "Comienza la partida!!";
         break;
     case 1:
-        x.innerHTML = "El jugador a selecionado la casilla: " + numero;
+        x.innerHTML = "El jugador ha selecionado la casilla: " + numero;
         break;
     case 2:
         switch(movimiento){
@@ -103,10 +103,10 @@ function chatJuego(jugador, movimiento){
                 x.innerHTML = "Victoria del jugador!!";
                 break;
             case 2:
-                x.innerHTML = "Victoria de la maquina";
+                x.innerHTML = "Victoria de la máquina :(";
                 break;
             case 3:
-                x.innerHTML = "Empate entre los dos";
+                x.innerHTML = "Empate entre el jugador y la máquina!!";
                 break;
         }
     }
